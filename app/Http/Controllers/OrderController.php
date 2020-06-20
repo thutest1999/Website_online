@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
+use App\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
-class ProductController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $product = Product::all();
-        return view('welcome', [
-            'product' => $product
-        ]);
+        //
     }
 
     /**
@@ -38,30 +37,37 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id = Auth::id();
+        // dd(request('shipping_name'));
+        Order::create([
+            'shipping_name' => request('shipping_name'),
+            'shipping_address' =>  request('shipping_address'),
+            'shipping_phone' =>  request('shipping_phone'),
+            'total' =>  request('total'),
+            'notes' => request('shipping_notes'),
+            'user_id' => $id
+        ]);
+        Cart::destroy();
+        return redirect('/');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Product  $slug
+     * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show(Order $order)
     {
-        $product = \App\Product::with('image')->where('slug', $slug)->get();
-        return view('product', [
-            'product' => $product
-        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit(Order $order)
     {
         //
     }
@@ -70,10 +76,10 @@ class ProductController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Product  $product
+     * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, Order $order)
     {
         //
     }
@@ -81,10 +87,10 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Product  $product
+     * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy(Order $order)
     {
         //
     }

@@ -206,6 +206,50 @@ class ProductSeeder extends Seeder
             'img_main' => 'iphone/xs_max_1.png',
             'price' => '25990000',
         ]);
+
+        DB::table('products')->insert([
+            'product_name' => 'iPhone 7',
+            'slug' => 'iPhone7',
+            'quantity' => 100,
+            'screen' => '	LED-backlit IPS LCD, 5.5", Retina HD',
+            'operation_system' => 'iOS 13',
+            'camera' => '7 MP',
+            'memory' => '64 GB',
+            'ram' => '3 GB',
+            'cpu' => '	Apple A13 Bionic 6 nhân',
+            'battery_capacity' => '3969 mAh',
+            'img_main' => 'iphone/iphone_7.png',
+            'price' => '9990000',
+        ]);
+
+        DB::table('products')->insert([
+            'product_name' => 'iPhone 8',
+            'slug' => 'iPhone8',
+            'quantity' => 100,
+            'screen' => '	LED-backlit IPS LCD, 5.5", Retina HD',
+            'operation_system' => 'iOS 13',
+            'camera' => '7 MP',
+            'memory' => '64 GB',
+            'ram' => '3 GB',
+            'cpu' => '	Apple A13 Bionic 6 nhân',
+            'battery_capacity' => '3969 mAh',
+            'img_main' => 'iphone/iphone_8.png',
+            'price' => '13990000',
+        ]);
+        DB::table('products')->insert([
+            'product_name' => 'iPhone SE 2020',
+            'slug' => 'iPhone8',
+            'quantity' => 100,
+            'screen' => '	LED-backlit IPS LCD, 5.5", Retina HD',
+            'operation_system' => 'iOS 13',
+            'camera' => '7 MP',
+            'memory' => '64 GB',
+            'ram' => '3 GB',
+            'cpu' => '	Apple A13 Bionic 6 nhân',
+            'battery_capacity' => '3969 mAh',
+            'img_main' => 'iphone/iphone_se',
+            'price' => '12490000',
+        ]);
         //4.vivo
 
         DB::table('products')->insert([
@@ -344,7 +388,7 @@ class ProductSeeder extends Seeder
             'ram' => '6 GB',
             'cpu' => '	Snapdragon 712 8 nhân',
             'battery_capacity' => '4500mAh',
-            'img_main' => 'xiaomi/redmi_note_9s.png',
+            'img_main' => 'xiaomi/note_9.png',
             'price' => '5990000',
         ]);
 

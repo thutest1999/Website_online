@@ -36,12 +36,48 @@
 
 <div class="filter">
     <div class="manu manu14">
-        <a href="/dtdd-apple-iphone" data-id="80" class=""><img src="{{ asset('img/logo/iphone.jpg')}}"></a>
-        <a href="/dtdd-samsung" data-id="2" class=""><img src="{{ asset('img/logo/samsung.jpg')}}"></a>
-        <a href="/dtdd-oppo" data-id="1971" class=""><img src="{{ asset('img/logo/oppo.png')}}"></a>
-        <a href="/dtdd-xiaomi" data-id="2235" class=""><img src="{{ asset('img/logo/xiaomi.jpg')}}"></a>
-        <a href="/dtdd-vivo" data-id="2236" class=""><img src="{{ asset('img/logo/vivo.jpg')}}"></a>
-        <a href="/dtdd-vsmart" data-id="17566" class=""><img src="{{ asset('img/logo/vsmart.png')}}"></a>
+        <form action="{{route('search')}}" method="get">
+
+            <input type="hidden" name="name" value="iPhone">
+            <button><img src="{{ asset('img/logo/iphone.jpg')}}"></button>
+
+        </form>
+
+        <form action="{{route('search')}}" method="get">
+
+            <input type="hidden" name="name" value="samsung">
+            <button><img src="{{ asset('img/logo/samsung.jpg')}}"></button>
+
+        </form>
+
+        <form action="{{route('search')}}" method="get">
+
+            <input type="hidden" name="name" value="oppo">
+            <button><img src="{{ asset('img/logo/oppo.png')}}"></button>
+
+        </form>
+
+        <form action="{{route('search')}}" method="get">
+
+            <input type="hidden" name="name" value="xiaomi">
+            <button><img src="{{ asset('img/logo/xiaomi.jpg')}}"></button>
+
+        </form>
+
+        <form action="{{route('search')}}" method="get">
+
+            <input type="hidden" name="name" value="vivo">
+            <button><img src="{{ asset('img/logo/vivo.jpg')}}"></button>
+
+        </form>
+
+        <form action="{{route('search')}}" method="get">
+
+            <input type="hidden" name="name" value="vsmart">
+            <button><img src="{{ asset('img/logo/vsmart.png')}}"></button>
+
+        </form>
+
     </div>
 </div>
 <br>
@@ -52,48 +88,48 @@
 
         <label style="font-weight: bold;">Chọn mức giá</label>
         &nbsp; &nbsp;
-        <form action="/phanloai" method="get">
+        <form action="{{route('price')}} " method="get">
             <div class="input-group">
-                <input type="hidden" name="search" class="form-control" value="5to30">
+                <input type="hidden" name="search" class="form-control" value="2to5">
                 <span class="input-group-prepend">
-                    <button type="submit" class="btn btn-primary">Từ 5 đến 30 triệu</button>
+                    <button type="submit" class="btn btn-primary">Từ 2 đến 5 triệu</button>
                 </span>
             </div>
         </form>
 
 
-        <form action="/phanloai" method="get">
+        <form action="{{route('price')}}" method="get">
             <div class="input-group">
-                <input type="hidden" name="search" class="form-control" value="5to30">
+                <input type="hidden" name="search" class="form-control" value="5to10">
                 <span class="input-group-prepend">
-                    <button type="submit" class="btn btn-primary">Từ 5 đến 30 triệu</button>
+                    <button type="submit" class="btn btn-primary">Từ 5 đến 10 triệu</button>
                 </span>
             </div>
         </form>
 
-        <form action="/phanloai" method="get">
+        <form action="{{route('price')}}" method="get">
             <div class="input-group">
-                <input type="hidden" name="search" class="form-control" value="5to30">
+                <input type="hidden" name="search" class="form-control" value="10to15">
                 <span class="input-group-prepend">
-                    <button type="submit" class="btn btn-primary">Từ 5 đến 30 triệu</button>
+                    <button type="submit" class="btn btn-primary">Từ 10 đến 15 triệu</button>
                 </span>
             </div>
         </form>
 
-        <form action="/phanloai" method="get">
+        <form action="{{route('price')}}" method="get">
             <div class="input-group">
-                <input type="hidden" name="search" class="form-control" value="5to30">
+                <input type="hidden" name="search" class="form-control" value="15to20">
                 <span class="input-group-prepend">
-                    <button type="submit" class="btn btn-primary">Từ 5 đến 30 triệu</button>
+                    <button type="submit" class="btn btn-primary">Từ 15 đến 20 triệu</button>
                 </span>
             </div>
         </form>
 
-        <form action="/phanloai" method="get">
+        <form action="{{route('price')}}" method="get">
             <div class="input-group">
-                <input type="hidden" name="search" class="form-control" value="5to30">
+                <input type="hidden" name="search" class="form-control" value="over20">
                 <span class="input-group-prepend">
-                    <button type="submit" class="btn btn-primary">Từ 5 đến 30 triệu</button>
+                    <button type="submit" class="btn btn-primary">Trên 20 triệu</button>
                 </span>
             </div>
         </form>

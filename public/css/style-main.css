@@ -190,7 +190,7 @@ textarea {
     opacity: 0.1;
 }
 
-.filter .manu a {
+.filter .manu button {
     float: left;
     width: 16.6%;
     border: 1px solid #e67531;
@@ -200,9 +200,10 @@ textarea {
     margin: 0 0 -1px -1px;
     color: #288ad6;
     text-align: center;
+    background: white;
 }
 
-.filter .manu a img {
+.filter .manu button img {
     max-height: 90%;
     position: absolute;
     left: 0;

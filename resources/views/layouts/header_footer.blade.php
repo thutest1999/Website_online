@@ -28,16 +28,21 @@
             </div>
 
             <div class="col-xl-5 col-lg-8 col-md-9 col-sm-5 my-col">
+                <form action="{{route('search')}} " method="get">
+                    <div class="input-group">
 
-                <div class="input-group">
-                    <input style="width: 280px;" type="email" class="form-control" placeholder="Bạn tìm gì ...">
-                    <span class="input-group-prepend">
-                        <button type="submit" class="btn btn-dark"><i class="fa fa-search"
-                                aria-hidden="true"></i></button>
-                    </span>
-                </div>
+                        <input style="width: 500px;" name="name" autocomplete="off" class="form-control"
+                            placeholder="Bạn tìm gì ...">
+                        <span class="input-group-prepend">
+                            <button type="submit" class="btn btn-dark"><i class="fa fa-search"
+                                    aria-hidden="true"></i></button>
+                        </span>
+
+                    </div>
+                </form>
             </div>
-            </>
+
+
             <!----->
             <div class="col-xl-5 align-self-center my-col">
                 @if (Route::has('login'))

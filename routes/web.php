@@ -38,6 +38,14 @@ Route::get('/{slug}', function () {
 //Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
+/*Search Function*/
+Route::get('/search', 'SearchController@search')->name('search');
+Route::get('/searchPrice', 'SearchController@price')->name('price');
+
+
+
+
+
 /*Shopping Cart */
 Route::get('onlinestores/mobile/cart', 'ShoppingCartController@index')->name('cart.index');
 Route::post('onlinestores/mobile/cart/add', 'ShoppingCartController@store')->name('cart.store')->middleware('auth');

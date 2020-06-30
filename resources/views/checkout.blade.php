@@ -43,8 +43,9 @@
 
             <div class="row">
                 <div class="col-2 text-center">
-                    <img class="img-responsive img-thumbnail" src="{{asset('img/products/'.$productCart->model->img)}}"
-                        alt="prewiew" width="60px" height="60px" style="border: 1px solid #928C8C">
+                    <img class="img-responsive img-thumbnail"
+                        src="{{asset('img/products/'.$productCart->model->img_main)}}" alt="prewiew" width="60px"
+                        height="60px" style="border: 1px solid #928C8C">
                 </div>
                 <div class="col-4">
                     <h6 class="product-name">{{$productCart->name}}</h6>
@@ -54,7 +55,7 @@
                         <h6>{{$productCart-> qty}}</h6>
                     </div>
                     <div class="col-6">
-                        <h6>{{$productCart-> price}} </h6>
+                        <h6>{{number_format($productCart-> price)}} ₫</h6>
                     </div>
                 </div>
             </div>
@@ -78,11 +79,7 @@
             <form>
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label text-left">Họ và tên</label>
-
-
-
-
-                    <label for="name" class="col-sm-2 col-form-label">{{ Session::get('name') }}</label>
+                    <label for="name" class="col-sm-10 text-left col-form-label">{{ Session::get('name') }}</label>
 
 
 
@@ -90,17 +87,18 @@
 
                 <div class="form-group row">
                     <label for="phone" class="col-sm-2 col-form-label text-left">Số điện thoại</label>
-                    <label for="phone" class="col-sm-2 col-form-label">{{ Session::get('phone') }}</label>
+                    <label for="phone" class="col-sm-10 text-left col-form-label">{{ Session::get('phone') }}</label>
                 </div>
 
                 <div class="form-group row ">
                     <label for="address" class="col-sm-2 col-form-label text-left">Địa chỉ</label>
-                    <label for="address" class="col-sm-2 col-form-label">{{ Session::get('address') }}</label>
+                    <label for="address"
+                        class="col-sm-10 col-form-label text-left">{{ Session::get('address') }}</label>
 
                 </div>
                 <div class="form-group row ">
                     <label for="notes" class="col-sm-2 col-form-label text-left">Ghi chú</label>
-                    <label for="notes" class="col-sm-2 col-form-label">{{ Session::get('notes') }}</label>
+                    <label for="notes" class="col-sm-10 text-left col-form-label">{{ Session::get('notes') }}</label>
 
                 </div>
             </form>

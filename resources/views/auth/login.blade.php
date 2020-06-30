@@ -17,7 +17,7 @@
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                                    name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    name="email" value="{{ old('email') }}" required autocomplete="off" autofocus>
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -51,11 +51,7 @@
                                     Đăng Nhập
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                                @endif
+
                             </div>
                         </div>
                     </form>

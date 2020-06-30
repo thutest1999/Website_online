@@ -17,6 +17,7 @@ class ShoppingCartController extends Controller
     {
         $productCart = Cart::content();
         //   dd($productCart->toArray());
+        //dd($productCart->toarray());
         return view('shoppingcart', ['productCart' => $productCart]);
     }
 
